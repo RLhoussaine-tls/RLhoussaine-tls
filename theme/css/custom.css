@@ -1,0 +1,239 @@
+/* Personnalisation des couleurs : orange -> bleu */
+
+/* Couleurs bleues */
+:root {
+  --primary-blue: #2563eb;
+  --light-blue: #3b82f6;
+  --hover-blue: #1d4ed8;
+}
+
+/* Remplacement des couleurs orange par défaut */
+:root {
+  --orange: #2563eb;
+  --light-orange: #3b82f6;
+}
+
+/* Liens */
+a {
+  color: var(--primary-blue) !important;
+}
+
+a:hover,
+a:focus {
+  color: var(--hover-blue) !important;
+}
+
+/* Menu et navigation */
+nav a,
+.menu a,
+.list a,
+.list li a {
+  color: var(--primary-blue) !important;
+}
+
+nav a:hover,
+.menu a:hover,
+.list a:hover,
+.list li a:hover {
+  color: var(--hover-blue) !important;
+  border-color: var(--primary-blue) !important;
+}
+
+/* Onglets actifs dans le menu */
+nav a.active,
+.menu a.active,
+.list a.active {
+  color: var(--primary-blue) !important;
+  border-bottom-color: var(--primary-blue) !important;
+}
+
+/* Boutons */
+.btn,
+button {
+  background-color: var(--primary-blue) !important;
+  border-color: var(--primary-blue) !important;
+  color: white !important;
+}
+
+.btn:hover,
+button:hover {
+  background-color: var(--hover-blue) !important;
+  border-color: var(--hover-blue) !important;
+}
+
+/* Liens sociaux dans la sidebar */
+.social a,
+.sc-linkedin,
+.sc-github,
+.sc-envelope {
+  color: var(--primary-blue) !important;
+}
+
+.social a:hover,
+.sc-linkedin:hover,
+.sc-github:hover,
+.sc-envelope:hover {
+  color: var(--light-blue) !important;
+}
+
+/* GitHub corner (si activé) */
+.github-corner svg {
+  fill: var(--primary-blue) !important;
+}
+
+/* Cibler spécifiquement les éléments avec couleur orange du thème */
+[style*="#D9411E"],
+[style*="#FF5A09"],
+[style*="orange"] {
+  color: var(--primary-blue) !important;
+}
+
+/* Menu principal horizontal */
+nav.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.main-nav .menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1em;
+  align-items: center;
+}
+
+nav.main-nav .menu li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+nav.main-nav .menu a {
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav.main-nav .menu a:hover {
+  color: var(--hover-blue);
+}
+
+/* Icône du site dans la navigation */
+
+/* Style pour les icônes sociales dans la sidebar */
+aside .social {
+  padding-top: 20px;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+aside .social li {
+  margin: 0;
+  padding: 0;
+}
+
+aside .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 0.3em;
+  background-color: transparent !important;
+  border: 2px solid var(--primary-blue) !important;
+  color: var(--primary-blue) !important;
+  text-decoration: none;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+  /* Carré avec bordure, sans padding */
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+aside .social a:hover {
+  border-color: var(--hover-blue) !important;
+  transform: translateY(-2px);
+}
+
+/* Images dans le carré avec bordure - garder leur couleur d'origine */
+aside .social a img {
+  width: 1.2em;
+  height: 1.2em;
+  display: block;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Icône LinkedIn - légèrement agrandie */
+aside .social .sc-linkedin img,
+aside ul.social a.sc-linkedin img,
+aside .social li a.sc-linkedin img {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+/* Icône email spécifique - agrandie, sans rognage */
+aside .social .sc-envelope img,
+aside ul.social a.sc-envelope img,
+aside .social li a.sc-envelope img {
+  border-radius: 0 !important;
+  object-fit: contain !important;
+  width: 1em !important;
+  height: 1em !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+/* S'assurer que tous les cercles sociaux sont bleus - règles très spécifiques */
+aside .social .sc-linkedin,
+aside .social .sc-github,
+aside .social .sc-envelope,
+aside ul.social a.sc-linkedin,
+aside ul.social a.sc-github,
+aside ul.social a.sc-envelope,
+aside .social li a.sc-linkedin,
+aside .social li a.sc-github,
+aside .social li a.sc-envelope {
+  background-color: transparent !important;
+  border: 2px solid var(--primary-blue) !important;
+  color: var(--primary-blue) !important;
+  padding: 0 !important;
+}
+
+/* Garder les icônes avec leur couleur d'origine (pas de filtre) */
+aside .social .sc-linkedin img,
+aside .social .sc-github img,
+aside .social .sc-envelope img,
+aside ul.social a.sc-linkedin img,
+aside ul.social a.sc-github img,
+aside ul.social a.sc-envelope img,
+aside .social li a.sc-linkedin img,
+aside .social li a.sc-github img,
+aside .social li a.sc-envelope img {
+  /* Pas de filtre - garder les couleurs d'origine */
+}
+
+aside .social .sc-linkedin:hover,
+aside .social .sc-github:hover,
+aside .social .sc-envelope:hover,
+aside ul.social a.sc-linkedin:hover,
+aside ul.social a.sc-github:hover,
+aside ul.social a.sc-envelope:hover,
+aside .social li a.sc-linkedin:hover,
+aside .social li a.sc-github:hover,
+aside .social li a.sc-envelope:hover {
+  border-color: var(--hover-blue) !important;
+  background-color: transparent !important;
+}
+
