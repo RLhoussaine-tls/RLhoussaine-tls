@@ -14,8 +14,8 @@ PYGMENTS_STYLE = "monokai"
 
 ROBOTS = "index, follow"
 
-# Utilisation du thème Flex depuis pelican-themes (recommandé)
-THEME = "../pelican-themes/Flex"
+# Utilisation du thème Flex depuis le répertoire themes local
+THEME = "themes/Flex"
 PATH = "content"
 OUTPUT_PATH = "output"
 TIMEZONE = "Europe/Paris"

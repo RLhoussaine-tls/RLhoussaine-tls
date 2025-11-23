@@ -30,6 +30,11 @@ jobs:
           pip install pelican markdown
           pip install ghp-import
 
+      - name: Clone Flex theme
+        run: |
+          mkdir -p themes
+          git clone --depth 1 https://github.com/alexandrevicenzi/Flex.git themes/Flex
+
       - name: Build site
         run: make publish
 
