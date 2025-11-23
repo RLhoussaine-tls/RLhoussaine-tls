@@ -6,7 +6,7 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 # Pour GitHub Pages, ajustez cette URL selon votre repository
-SITEURL = "https://rlhoussaine-tls.github.io"
+SITEURL = "https://rlhoussaine-tls.github.io/RLhoussaine-tls"
 RELATIVE_URLS = False
 
 USE_LESS = False
