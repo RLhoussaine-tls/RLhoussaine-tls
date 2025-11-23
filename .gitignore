@@ -24,6 +24,7 @@ output/
 cache/
 *.pid
 *.log
+themes/
 
 # Virtual Environment
 venv/
