@@ -1,78 +1,33 @@
-# Site web personnel - Romain Lhoussaine
 
-Site web personnel généré avec [Pelican](https://getpelican.com/) et le thème [Flex](https://github.com/alexandrevicenzi/Flex).
+# 👋 Welcome to My GitHub!
 
-## Installation
+## 👨‍🚀 About Me
 
-1. Créer et activer l'environnement virtuel :
+Astrophysics and Space Instrumentation Engineer 🛰️ with expertise in scientific software development, image processing, and data analysis for space missions. Building innovative 🚀 and robust solutions for space and Earth observation data.
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
+## 💼 Professional Experience
 
-2. Installer les dépendances :
+- 🟢 Developed hyperspectral imaging algorithms and scientific software for satellite ground systems.
+- ⚙️ Integrated and validated FlatSat and simulator benches for satellite software qualification.
+- 🌍 Created scientific pipelines for Earth observation satellites (Sentinel 3 SYNERGY, LSTM).
+- 🔭 Validated the NISP instrument onboard the EUCLID space telescope for data calibration.
+- 📊 Simulated, assembled, and tested astronomical spectrograph instruments (Prime Focus Spectrograph PFS, Subaru).
+- 🛩️ Applied advanced imaging techniques for aerospace component analysis via tomographic data.
 
-```bash
-pip install -r requirements.txt
-```
+## 💡 Skills & Technologies
 
-**Note:** Vous devez activer l'environnement virtuel avant d'utiliser `make` :
+- 🐍 Python, 🖥️ C / C++, ☕ Java, 💾 Fortran 95, 🟦 IDL, 🗄️ SQL, 🐚 Shell/Bash, 🗂️ Git
+- 🚦 HPC, Parallelization, Algorithm development, Image analysis
+- 🐳 Docker, ⚡ CI/CD, ☁️ Kubernetes, 🔁 Agile, 📒 Notebooks, 📈 Tableau
+- 🔬 Spectroscopy, Satellite data, Instrumentation, Data analysis, Scientific simulation
 
-```bash
-source .venv/bin/activate
-```
+## 🎓 Education
 
-3. Générer le site :
+- 📚 Master’s in Astronomy & Space Systems Engineering (Observatoire de Paris / PSL)
+- 📚 Master’s in Space Sciences & Technologies (Observatoire de Paris / PSL)
+- 🧪 Double Bachelor’s in Physics & Chemistry (Université Paris-Sud / Paris-Saclay)
 
-```bash
-make html
-```
+## 🌐 Languages
 
-4. Servir le site localement :
-
-```bash
-make serve
-```
-
-Le site sera accessible sur http://localhost:8000
-
-**Note:** Si le port 8000 est déjà utilisé, vous pouvez :
-- Arrêter le serveur précédent : `./stop-server.sh` ou `pkill -f "pelican.*RLhoussaine-tls"`
-- Utiliser un autre port : `make serve PORT=8001`
-
-## Développement
-
-Pour régénérer automatiquement le site lors des modifications :
-
-```bash
-make devserver
-```
-
-## Publication
-
-Pour générer le site en mode production :
-
-```bash
-make publish
-```
-
-Pour publier sur GitHub Pages :
-
-```bash
-make github
-```
-
-## Structure
-
-- `content/` - Contenu du site (pages, articles)
-- `output/` - Site généré (ignoré par git)
-- `pelicanconf.py` - Configuration de développement
-- `publishconf.py` - Configuration de production
-
-## Thème
-
-Le thème Flex est utilisé depuis le repository [pelican-themes](https://github.com/getpelican/pelican-themes) :
-- Le thème est situé dans `../pelican-themes/Flex`
-- Pour mettre à jour le thème : `cd ../pelican-themes && git submodule update --remote Flex`
-
+- 🇬🇧 English (Fluent C1)
+- 🇪🇸 Spanish (Professional B2)
