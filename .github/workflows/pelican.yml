@@ -27,7 +27,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install pelican markdown
-          pip install ghp-import
 
       - name: Clone Flex theme
         run: |
