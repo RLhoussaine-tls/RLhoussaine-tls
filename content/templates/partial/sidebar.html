@@ -1,0 +1,92 @@
+<aside>
+  <div>
+    <a href="{{ SITEURL }}/">
+      {% if SITELOGO %}
+      <img src="{{ SITELOGO }}" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+      {% else %}
+      <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+      {% endif %}
+    </a>
+
+    <h1>
+      <a href="{{ SITEURL }}/">{{ SITETITLE }}</a>
+    </h1>
+
+    {% if SITESUBTITLE %}
+    <p>{{ SITESUBTITLE }}</p>
+    {% endif %}
+
+    {# Informations de contact avec images personnalisées #}
+    {% if CONTACT_PHONE or CONTACT_LOCATION %}
+    <div class="contact-info" style="margin-top: 1em; font-size: 0.9em; line-height: 1.6;">
+      {% if CONTACT_PHONE %}
+      <p style="margin: 0.3em 0; display: flex; align-items: center; gap: 0.5em;">
+        <img src="{{ SITEURL }}/images/telephone-intelligent.png" alt="Téléphone" style="width: 20px; height: 20px; vertical-align: middle;">
+        <a href="tel:{{ CONTACT_PHONE }}">{{ CONTACT_PHONE }}</a>
+      </p>
+      {% endif %}
+      {% if CONTACT_LOCATION %}
+      <p style="margin: 0.3em 0; display: flex; align-items: center; gap: 0.5em;">
+        <img src="{{ SITEURL }}/images/broche-de-localisation.png" alt="Localisation" style="width: 20px; height: 20px; vertical-align: middle;">
+        {{ CONTACT_LOCATION }}
+      </p>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if PLUGINS %}
+    {% if ('tipue_search' in PLUGINS or 'pelican.plugins.tipue_search' in PLUGINS) %}
+    <form class="navbar-search" action="{{ SITEURL }}/search.html" role="search">
+      <input type="text" name="q" id="tipue_search_input" placeholder="{{ _('Search...') }}">
+    </form>
+    {% elif 'pelican.plugins.search' in PLUGINS %}
+    <div class="stork">
+      <input class="stork-input" type="text" autocomplete="off" name="q" data-stork="sitesearch" placeholder="{{ _('Search...') }}"/>
+      <div class="stork-output" data-stork="sitesearch-output"></div>
+    </div>
+    {% endif %}
+    {% endif %}
+
+    {# Pages et liens retirés - déjà dans le menu principal en haut #}
+
+    {# Liens sociaux avec images personnalisées #}
+    {% if SOCIAL %}
+    {% set solid = ['at', 'envelope', 'mailbox', 'rss'] %}
+    {% set relme = ['at', 'envelope', 'mailbox', 'mastodon'] %}
+    <ul class="social">
+      {% for name, link in SOCIAL %}
+      <li>
+        <a class="sc-{{ name }}"
+           {% if name in relme %}rel="me"{% endif %}
+           href="{{ link }}"
+           target="_blank"
+           title="{{ name|title }}">
+          {% if name == 'linkedin' %}
+            <img src="{{ SITEURL }}/images/linkedin.png" alt="LinkedIn">
+          {% elif name == 'github' %}
+            <img src="{{ SITEURL }}/images/gite.png" alt="GitHub">
+          {% elif name == 'envelope' %}
+            <img src="{{ SITEURL }}/images/courrier.png" alt="Email">
+          {% else %}
+            <i class="{% if name in solid %}fa-solid{% else %}fa-brands{% endif %} fa-{{ name }}"></i>
+          {% endif %}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {# MENUITEMS et SOCIAL retirés - déjà dans le menu principal en haut #}
+  </div>
+
+  {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.aside %}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-aside"
+         data-ad-client="{{ GOOGLE_ADSENSE.ca_id }}"
+         data-ad-slot="{{ GOOGLE_ADSENSE.ads.aside }}"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  {% endif %}
+</aside>
+

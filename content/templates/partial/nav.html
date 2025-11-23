@@ -1,0 +1,12 @@
+{% if MENUITEMS %}
+<nav class="main-nav">
+  <ul class="menu">
+    {% for title, link in MENUITEMS %}
+    <li>
+      <a href="{{ SITEURL }}/{{ link }}">{{ title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endif %}
+
