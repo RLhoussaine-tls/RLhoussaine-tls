@@ -1,6 +1,8 @@
 
 # 👋 Welcome to My GitHub!
 
+[![Project Euler](https://projecteuler.net/profile/rlhoussaine.png)](https://projecteuler.net/progress=rlhoussaine)
+
 ## 👨‍🚀 About Me
 
 Astrophysics and Space Instrumentation Engineer 🛰️ with expertise in scientific software development, image processing, and data analysis for space missions. Building innovative 🚀 and robust solutions for space and Earth observation data.
